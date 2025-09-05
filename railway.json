@@ -1,0 +1,24 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "path": "server/Dockerfile"
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "restartPolicyType": "ON_FAILURE",
+    "sleepApplication": false,
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 100
+  },
+  "variables": {
+    "PORT": "4000",
+    "NODE_ENV": "production",
+    "STORAGE_DIR": "/data/storage"
+  },
+  "volumes": [
+    {
+      "name": "data",
+      "mountPath": "/data"
+    }
+  ]
+}

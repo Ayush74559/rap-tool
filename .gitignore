@@ -32,6 +32,5 @@ __pycache__/
 storage/uploads/
 storage/outputs/
 
-# Docker
+# Docker (keep .dockerignore, but allow Dockerfiles)
 **/.dockerignore
-**/Dockerfile*
